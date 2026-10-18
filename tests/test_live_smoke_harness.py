@@ -1137,7 +1137,7 @@ def test_support_plugin_validates_only_existing_manifests(tmp_path, removed):
 
 @pytest.mark.parametrize(("landed", "expect_revert"), [(True, True), (False, False)])
 def test_gateway_settings_lifecycle_reverts_when_failed_apply_still_landed(monkeypatch, landed, expect_revert) -> None:
-    """#861: apply can report failure after the PUT landed; the harness must put it back."""
+    """Apply can report failure after the PUT landed; the harness must put it back."""
     import live_smoke
     from unifi_network_mcp import runtime
 

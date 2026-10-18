@@ -108,7 +108,7 @@ class TestUpdateGatewaySettings:
 
     @pytest.mark.asyncio
     async def test_confirm_unverified_write_is_not_reported_as_failed(self):
-        """#861: when only the verifying re-read failed, say the change may be live."""
+        """When only the verifying re-read failed, say the change may be live."""
         from unifi_core.network.managers.gateway_settings_manager import UNVERIFIED_UPDATE_ERROR
 
         detail = f"{UNVERIFIED_UPDATE_ERROR} to verify it: 503. The change may have been applied."

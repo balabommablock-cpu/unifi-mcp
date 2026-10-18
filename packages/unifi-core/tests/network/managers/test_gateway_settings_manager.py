@@ -88,7 +88,7 @@ async def test_update_fails_when_not_persisted():
 
 
 async def test_update_reports_unverified_when_reread_fails_after_put():
-    """#861: the PUT landed, then the verifying re-read failed (e.g. a transient 503).
+    """The PUT landed, then the verifying re-read failed (e.g. a transient 503).
     That must not read as a plain failure, since the change may be live."""
     conn = _make_connection()
     mgr = GatewaySettingsManager(conn)
